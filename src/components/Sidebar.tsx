@@ -30,7 +30,7 @@ export default function Sidebar({ currentPage, onPageChange, collapsed, onToggle
   let lastSection = '';
 
   return (
-    <aside className={`${collapsed ? 'w-16' : 'w-64'} bg-white border-r border-slate-200 flex flex-col transition-all duration-300 relative`}>
+    <aside className={`${collapsed ? 'w-16' : 'w-64'} bg-white border-r border-slate-200 flex flex-col transition-all duration-300 relative z-10`}>
       {/* Logo */}
       <div className="h-16 flex items-center px-4 border-b border-slate-100">
         <div className="flex items-center gap-2">
@@ -63,10 +63,10 @@ export default function Sidebar({ currentPage, onPageChange, collapsed, onToggle
               )}
               <button
                 onClick={() => onPageChange(item.id)}
-                className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm font-medium transition-all duration-150
+                className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm font-medium transition-all duration-100
                   ${currentPage === item.id 
-                    ? 'bg-brand-50 text-brand-700 border-r-2 border-brand-600' 
-                    : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
+                    ? 'bg-brand-50 text-brand-700 border-r-2 border-brand-600 active:bg-brand-100' 
+                    : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900 active:bg-slate-200'
                   }
                   ${collapsed ? 'justify-center' : ''}
                 `}
@@ -85,7 +85,7 @@ export default function Sidebar({ currentPage, onPageChange, collapsed, onToggle
       {/* Collapse toggle */}
       <button
         onClick={onToggleCollapse}
-        className="absolute -right-3 top-20 w-6 h-6 bg-white border border-slate-200 rounded-full flex items-center justify-center shadow-sm hover:bg-slate-50 transition-colors"
+        className="absolute -right-3 top-20 w-6 h-6 bg-white border border-slate-200 rounded-full flex items-center justify-center shadow-sm hover:bg-slate-100 hover:scale-110 active:scale-95 transition-all z-50"
       >
         {collapsed ? <ChevronRight size={14} className="text-slate-500" /> : <ChevronLeft size={14} className="text-slate-500" />}
       </button>

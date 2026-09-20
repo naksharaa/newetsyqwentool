@@ -76,8 +76,8 @@ export default function Dashboard() {
               <p className="text-sm text-slate-500">Last 7 days performance</p>
             </div>
             <div className="flex gap-2">
-              <button className="px-3 py-1.5 text-xs font-medium bg-brand-50 text-brand-700 rounded-lg">Week</button>
-              <button className="px-3 py-1.5 text-xs font-medium text-slate-500 hover:bg-slate-50 rounded-lg">Month</button>
+              <button className="px-3 py-1.5 text-xs font-medium bg-brand-50 text-brand-700 rounded-lg hover:bg-brand-100 active:scale-95 transition-all">Week</button>
+              <button className="px-3 py-1.5 text-xs font-medium text-slate-500 hover:bg-slate-100 hover:text-slate-700 rounded-lg active:scale-95 transition-all">Month</button>
             </div>
           </div>
           <div className="flex items-end gap-3 h-48">
@@ -130,7 +130,7 @@ export default function Dashboard() {
       <div className="mt-6 bg-white rounded-xl border border-slate-200 p-6">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-semibold text-slate-800">Recent Orders</h2>
-          <button className="text-sm text-brand-600 hover:text-brand-700 font-medium">View All →</button>
+          <button className="text-sm text-brand-600 hover:text-brand-700 hover:underline font-medium active:scale-95 transition-all">View All →</button>
         </div>
         <div className="overflow-x-auto">
           <table className="w-full">

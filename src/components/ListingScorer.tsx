@@ -96,7 +96,7 @@ export default function ListingScorer() {
                   </span>
                   <button
                     onClick={() => handleAnalyze(listing.id)}
-                    className="px-3 py-1.5 text-xs font-medium text-brand-600 bg-brand-50 hover:bg-brand-100 rounded-lg transition-colors"
+                    className="px-3 py-1.5 text-xs font-medium text-brand-600 bg-brand-50 hover:bg-brand-100 active:scale-95 rounded-lg transition-all shadow-sm hover:shadow"
                   >
                     Analyze
                   </button>
@@ -141,10 +141,10 @@ export default function ListingScorer() {
                         )}
                       </ul>
                       <div className="flex gap-2 pt-2">
-                        <button className="px-3 py-1.5 text-xs font-medium bg-brand-600 text-white rounded-lg hover:bg-brand-700 transition-colors">
+                        <button className="px-3 py-1.5 text-xs font-medium bg-brand-600 text-white rounded-lg hover:bg-brand-700 active:scale-95 transition-all shadow-sm hover:shadow">
                           Apply Suggestions
                         </button>
-                        <button className="px-3 py-1.5 text-xs font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
+                        <button className="px-3 py-1.5 text-xs font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-100 active:scale-95 transition-all">
                           View Full Report
                         </button>
                       </div>

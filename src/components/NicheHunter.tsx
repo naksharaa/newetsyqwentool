@@ -54,23 +54,22 @@ export default function NicheHunter() {
             />
           </div>
           <div className="flex items-end">
-            <button
-              onClick={handleRun}
-              disabled={isRunning}
-              className="px-6 py-2.5 bg-brand-600 hover:bg-brand-700 disabled:bg-brand-300 text-white font-medium rounded-lg transition-colors flex items-center gap-2"
-            >
-              {isRunning ? (
-                <>
-                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                  Analyzing...
-                </>
-              ) : (
-                <>
-                  <Sparkles size={16} /> Find Niches
-                </>
-              )}
-            </button>
-          </div>
+          <button
+            onClick={handleRun}
+            disabled={isRunning}
+            className="px-6 py-2.5 bg-brand-600 hover:bg-brand-700 active:scale-95 disabled:bg-brand-300 disabled:active:scale-100 text-white font-medium rounded-lg transition-all flex items-center gap-2 shadow-sm hover:shadow-md"
+          >
+            {isRunning ? (
+              <>
+                <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                Analyzing...
+              </>
+            ) : (
+              <>
+                <Sparkles size={16} /> Find Niches
+              </>
+            )}
+          </button>          </div>
         </div>
       </div>
 
@@ -110,7 +109,7 @@ export default function NicheHunter() {
                       <div className="text-lg font-bold text-brand-600">{niche.opportunity}</div>
                       <div className="text-[10px] text-slate-400">Score</div>
                     </div>
-                    <button className="px-3 py-1.5 text-xs font-medium text-brand-600 bg-brand-50 hover:bg-brand-100 rounded-lg opacity-0 group-hover:opacity-100 transition-all flex items-center gap-1">
+                    <button className="px-3 py-1.5 text-xs font-medium text-brand-600 bg-brand-50 hover:bg-brand-100 active:scale-95 rounded-lg opacity-0 group-hover:opacity-100 transition-all flex items-center gap-1 shadow-sm">
                       Explore <ArrowRight size={12} />
                     </button>
                   </div>

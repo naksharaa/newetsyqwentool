@@ -95,7 +95,7 @@ export default function MockupFactory() {
             <button
               onClick={handleCreateMockup}
               disabled={isCreating}
-              className="w-full px-4 py-2.5 bg-pink-600 hover:bg-pink-700 disabled:bg-pink-300 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="w-full px-4 py-2.5 bg-pink-600 hover:bg-pink-700 active:scale-95 disabled:bg-pink-300 disabled:active:scale-100 text-white font-medium rounded-lg transition-all flex items-center justify-center gap-2 shadow-sm hover:shadow-md"
             >
               {isCreating ? (
                 <>
@@ -160,7 +160,7 @@ export default function MockupFactory() {
               </div>
               <div className="flex items-center gap-2">
                 {listing.status !== 'complete' && (
-                  <button className="px-3 py-1.5 text-xs font-medium text-brand-600 bg-brand-50 hover:bg-brand-100 rounded-lg transition-colors">
+                  <button className="px-3 py-1.5 text-xs font-medium text-brand-600 bg-brand-50 hover:bg-brand-100 active:scale-95 rounded-lg transition-all shadow-sm hover:shadow">
                     Create Mockups
                   </button>
                 )}

@@ -54,7 +54,7 @@ export default function App() {
         collapsed={sidebarCollapsed}
         onToggleCollapse={() => setSidebarCollapsed(!sidebarCollapsed)}
       />
-      <main className="flex-1 overflow-y-auto">
+      <main className="flex-1 overflow-y-auto relative z-0">
         <div className="animate-fade-in">
           {renderPage()}
         </div>

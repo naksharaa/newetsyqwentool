@@ -26,7 +26,7 @@ export default function Settings() {
             <Zap size={20} className="text-amber-500" />
             API Usage Today
           </h2>
-          <button className="text-sm text-slate-500 hover:text-slate-700 flex items-center gap-1">
+          <button className="text-sm text-slate-500 hover:text-slate-700 hover:bg-slate-100 px-2 py-1 rounded-lg active:scale-95 transition-all flex items-center gap-1">
             <RefreshCw size={14} /> Reset
           </button>
         </div>
@@ -142,7 +142,7 @@ export default function Settings() {
               <p className="text-xs text-emerald-600">OAuth token valid • Expires in 29 days</p>
             </div>
           </div>
-          <button className="px-4 py-2 text-sm font-medium text-emerald-700 bg-emerald-100 hover:bg-emerald-200 rounded-lg transition-colors">
+          <button className="px-4 py-2 text-sm font-medium text-emerald-700 bg-emerald-100 hover:bg-emerald-200 active:scale-95 rounded-lg transition-all">
             Reconnect
           </button>
         </div>
@@ -152,7 +152,7 @@ export default function Settings() {
       <div className="flex justify-end">
         <button
           onClick={handleSave}
-          className="px-6 py-2.5 bg-brand-600 hover:bg-brand-700 text-white font-medium rounded-lg transition-colors flex items-center gap-2"
+          className="px-6 py-2.5 bg-brand-600 hover:bg-brand-700 active:scale-95 text-white font-medium rounded-lg transition-all flex items-center gap-2 shadow-sm hover:shadow-md"
         >
           {saved ? (
             <>

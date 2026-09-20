@@ -23,6 +23,26 @@ body {
   background: #f8fafc;
 }
 
+/* Global button styles */
+button {
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Ensure buttons are clickable */
+button, [role="button"] {
+  pointer-events: auto;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 6px;

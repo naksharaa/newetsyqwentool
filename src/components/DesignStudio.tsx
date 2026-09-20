@@ -84,7 +84,7 @@ export default function DesignStudio() {
             <button
               onClick={handleGenerate}
               disabled={isGenerating}
-              className="w-full px-4 py-2 bg-violet-600 hover:bg-violet-700 disabled:bg-violet-300 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+              className="w-full px-4 py-2 bg-violet-600 hover:bg-violet-700 active:scale-95 disabled:bg-violet-300 disabled:active:scale-100 text-white font-medium rounded-lg transition-all flex items-center justify-center gap-2 shadow-sm hover:shadow-md"
             >
               {isGenerating ? (
                 <>
@@ -146,10 +146,10 @@ export default function DesignStudio() {
                 )}
                 {/* Hover overlay */}
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
-                  <button className="p-2 bg-white rounded-lg hover:bg-slate-100 transition-colors">
+                  <button className="p-2 bg-white rounded-lg hover:bg-slate-100 active:scale-90 transition-all">
                     <Download size={16} className="text-slate-700" />
                   </button>
-                  <button className="p-2 bg-white rounded-lg hover:bg-slate-100 transition-colors">
+                  <button className="p-2 bg-white rounded-lg hover:bg-slate-100 active:scale-90 transition-all">
                     <Heart size={16} className="text-slate-700" />
                   </button>
                 </div>

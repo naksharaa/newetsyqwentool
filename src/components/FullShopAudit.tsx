@@ -122,7 +122,7 @@ export default function FullShopAudit() {
           <button
             onClick={handleStartAudit}
             disabled={isRunning}
-            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-300 text-white text-sm font-medium rounded-lg transition-colors flex items-center gap-2"
+            className="px-4 py-2 bg-indigo-600 hover:bg-indigo-700 active:scale-95 disabled:bg-indigo-300 disabled:active:scale-100 text-white text-sm font-medium rounded-lg transition-all flex items-center gap-2 shadow-sm hover:shadow-md"
           >
             {isRunning ? (
               <>
@@ -134,7 +134,7 @@ export default function FullShopAudit() {
               </>
             )}
           </button>
-          <button className="px-4 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors flex items-center gap-2">
+          <button className="px-4 py-2 text-sm font-medium text-slate-600 bg-white border border-slate-200 rounded-lg hover:bg-slate-100 active:scale-95 transition-all flex items-center gap-2">
             <RefreshCw size={14} /> Reset
           </button>
         </div>

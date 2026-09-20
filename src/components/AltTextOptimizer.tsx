@@ -92,16 +92,16 @@ export default function AltTextOptimizer() {
               <span className="text-sm font-medium text-slate-700">Mode:</span>
               <button
                 onClick={() => setMode('ai')}
-                className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
-                  mode === 'ai' ? 'bg-teal-50 text-teal-700 border border-teal-200' : 'text-slate-500 hover:bg-slate-50'
+                className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-all active:scale-95 ${
+                  mode === 'ai' ? 'bg-teal-50 text-teal-700 border border-teal-200 shadow-sm' : 'text-slate-500 hover:bg-slate-100 hover:text-slate-700'
                 }`}
               >
                 <Wand2 size={12} className="inline mr-1" /> AI Vision
               </button>
               <button
                 onClick={() => setMode('local')}
-                className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
-                  mode === 'local' ? 'bg-teal-50 text-teal-700 border border-teal-200' : 'text-slate-500 hover:bg-slate-50'
+                className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-all active:scale-95 ${
+                  mode === 'local' ? 'bg-teal-50 text-teal-700 border border-teal-200 shadow-sm' : 'text-slate-500 hover:bg-slate-100 hover:text-slate-700'
                 }`}
               >
                 Local (Tags-based)
@@ -110,7 +110,7 @@ export default function AltTextOptimizer() {
           </div>
           <button
             onClick={handleGenerateAll}
-            className="px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition-colors flex items-center gap-2"
+            className="px-4 py-2 bg-teal-600 hover:bg-teal-700 active:scale-95 text-white text-sm font-medium rounded-lg transition-all flex items-center gap-2 shadow-sm hover:shadow-md"
           >
             <Wand2 size={14} /> Generate All Missing
           </button>
@@ -163,7 +163,7 @@ export default function AltTextOptimizer() {
                   ) : (
                     <button
                       onClick={() => handleGenerate(image.id)}
-                      className="px-3 py-1.5 text-xs font-medium text-teal-600 bg-teal-50 hover:bg-teal-100 rounded-lg transition-colors flex items-center gap-1"
+                      className="px-3 py-1.5 text-xs font-medium text-teal-600 bg-teal-50 hover:bg-teal-100 active:scale-95 rounded-lg transition-all flex items-center gap-1 shadow-sm hover:shadow"
                     >
                       Generate <ArrowRight size={12} />
                     </button>

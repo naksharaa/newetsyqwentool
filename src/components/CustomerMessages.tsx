@@ -99,8 +99,8 @@ export default function CustomerMessages() {
           <button
             key={f}
             onClick={() => setFilter(f)}
-            className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
-              filter === f ? 'bg-brand-100 text-brand-700' : 'text-slate-500 hover:bg-slate-100'
+            className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-all active:scale-95 ${
+              filter === f ? 'bg-brand-100 text-brand-700 shadow-sm' : 'text-slate-500 hover:bg-slate-100 hover:text-slate-700'
             }`}
           >
             {f === 'all' ? 'All' : f}
@@ -136,7 +136,7 @@ export default function CustomerMessages() {
                   </p>
                 </div>
                 {task.status !== 'sent' && (
-                  <button className="px-3 py-1.5 bg-brand-600 hover:bg-brand-700 text-white text-xs font-medium rounded-lg flex items-center gap-1 transition-colors">
+                  <button className="px-3 py-1.5 bg-brand-600 hover:bg-brand-700 active:scale-95 text-white text-xs font-medium rounded-lg flex items-center gap-1 transition-all shadow-sm hover:shadow">
                     <Send size={12} /> Send
                   </button>
                 )}

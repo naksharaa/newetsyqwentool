@@ -56,7 +56,7 @@ export default function CompetitorSpy() {
             <button
               onClick={handleScan}
               disabled={isScanning}
-              className="px-6 py-2.5 bg-cyan-600 hover:bg-cyan-700 disabled:bg-cyan-300 text-white font-medium rounded-lg transition-colors flex items-center gap-2"
+              className="px-6 py-2.5 bg-cyan-600 hover:bg-cyan-700 active:scale-95 disabled:bg-cyan-300 disabled:active:scale-100 text-white font-medium rounded-lg transition-all flex items-center gap-2 shadow-sm hover:shadow-md"
             >
               {isScanning ? (
                 <>
